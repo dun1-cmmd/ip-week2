@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> DUNCAN </title>
+    <meta charset="utf-8">
+    <title>Bootstrap</title>
+	<link href="css/bootstrap.css" rel ="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+	<div class="container">
+	<div class="jumbotron">
+	<div class="card">
+    <div class="card-body">
+    <div class="row">
+	<h1>DUNCAN ONDIEKI</h1>
+</div>
+<div class="card-body">
+
+	<P>
+		
+		The application outputs to the user their Akan name depending on their gender.<br>
+		If a user is male and the result of the calculation is 0, then the application <br>
+		should match that with Kwasi since Kwasi corresponds to Sunday which has an index 0. <br>
+		Hence the output the user will see should be something like “Your Akan name is Kwasi”<br>
+	
+</P>
+</div>
+<div class="card-footer">
+
+<form method="post" action="" id="userData" onsubmit="user();">
+<label><strong>Enter day</strong></label><br>
+<input type="number" name="day" required><br>
+
+<label><strong>Enter month</strong></label><br>
+<input type="number" name="month" required><br>
+
+<label> <strong>Enter year</strong></label><br>
+<input type="number" name="year" required><br>
+
+<label><strong>Gender</strong> </label><br>
+<select name="gender">
+	<option>male</option>
+	<option>female</option>
+</select>
+
+<br><br>
+<input type="submit" name="submit" value="Submit">
+
+</form>
+
+
+
+<script type="text/javascript">
+	
+	function user(){
+		var day=parseInt(userData.elements["day"].value);
+		var month=parseInt(userData.elements["month"].value);
+		var year=parseInt(userData.elements["year"].value);
+		var gender=userData.elements['gender'].value;
+
+		var y=userData.elements["year"].value;
+		var last=y.substr(-2);
+
+		
+
+		var today=new Date();
+		var currentYear=parseInt(today.getFullYear());
+
+		var maleNames=["Kwasi","Kwadwo"," Kwabena","Kwaku","Yaw","Kofi","Kwame"];
+		var femaleNames=["Akosua","Adwoa","Abenaa","Akua"," Yaa"," Afua","Ama"]
+
+
+		if(day<1 || day>31){
+			alert("Wrong day");
+		}else if(month<1 || month>12){
+			alert("Wrong month")
+		}else if(year>currentYear){
+			alert("Wrong year")
+		}else{
+			var CC=21;
+			var YY=parseInt(last);
+			var MM=month;
+			var DD=day
+			var d=parseInt( ( ( (CC/4) -2*CC-1) + (5*YY/4)  + (26*(MM+1)/10) + DD )%7);
+
+
+			if(gender=="male"){
+				var userName=maleNames[d];
+				alert(userName);
+			}else{
+				var userName=femaleNames[d];
+				alert(userName);
+			}
+		}
+	}
+</script><br>
+<div class="container">
+
+<p>The table below is a reference to your result</p>   
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <td><strong>MALE</strong></td>
+        <td>KWASI</td><br>
+        <td>KWADWO</td><br>
+        <td>KWABENA</td><br>
+        <td>KWAKU</td><br>
+        <td>YAW</td><br>
+        <td>KOFI</td><br>
+        <td> KWAME</td><br>
+      </tr>
+     <tr>
+       <td><strong>FEMALE</strong></td>
+       <td>AKOSUA</td><br>
+        <td>ADWOA</td><br>
+        <td>ABENA</td><br>
+        <td>AKUA</td><br>
+        <td>YAA</td><br>
+        <td>AFUA</td><br>
+        <td>AMA</td> <br>
+      </tr>
+      <tr>
+        <td><strong>DAY</strong></td>
+        <td>SUNDAY</td> <br>
+        <td>MONDAY</td><br>
+         <td>TUESDAY</td><br>
+         <td>WEDNESDAY</td><br>
+         <td>THURSDAY</td><br>
+         <td>FRIDAY</td><br>
+         <td>SATURDAY</td><br>
+       </tr>
+    </tbody>
+  </table>
+</div>
+</P>
+</body>
+</html>
