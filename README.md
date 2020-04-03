@@ -5,7 +5,7 @@ The project consists of html,css,bootstrap and java script;
          (ii)variables
          (iii)boolens
          (iv)control flows and
-         (v)functions
+         (v)functions.
          
 Duncan ondieki is the author of the project
 duncan ondieki is an upcoming software developer and 
