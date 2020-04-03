@@ -1,5 +1,4 @@
 # ip-week2
-DUNCAN ONDIEKI
 This is my week 2 final ip,
 The project consists of html,css,bootstrap and java script;
          (i)strings
