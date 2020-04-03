@@ -4,7 +4,7 @@ The project consists of html,css,bootstrap and java script;
          (i)strings
          (ii)variables
          (iii)boolens
-         (iv)contrpl flows and
+         (iv)control flows and
          (v)functions
          
 Duncan ondieki is the author of the project
