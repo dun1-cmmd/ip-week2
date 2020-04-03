@@ -6,7 +6,8 @@ The project consists of html and css, bootstrap and java script;
          (ii)variables
          (iii)boolens
          (iv)contrpl flows and
-         (v).functions
+         (v)functions
+         
 Duncan ondieki is the author of the project 
 To start using this project use the following commands:
 git clone https://github.com/dun1-cmmd/ip-week2 cd index code .
